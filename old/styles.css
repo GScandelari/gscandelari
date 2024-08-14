@@ -1,0 +1,281 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .logo {
+    width: 200px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.sidebar button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar button:hover {
+    background-color: #0056b3;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+/* Estilos para o currículo */
+.section {
+    margin-bottom: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.profile-info h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.profile-info p {
+    margin: 5px 0 0 0;
+}
+
+
+/* Estilos para o conteúdo da seção "Sobre" */
+.sobre-content,
+.experiencias-content,
+.formacao-content {
+    margin-top: 20px;
+}
+
+.sobre-content p,
+.experiencias-content p,
+.formacao-content p {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.sobre-content ul,
+.experiencias-content ul,
+.formacao-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.sobre-content ul li,
+.experiencias-content ul li,
+.formacao-content ul li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Estilos para o botão de retração/expansão */
+.toggle-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilos para o conteúdo da seção "Experiências Profissionais" */
+.experiencias-content {
+    margin-top: 20px;
+}
+
+.experiencias-content .experience {
+    margin-bottom: 20px;
+}
+
+.experiencias-content .experience h3 {
+    margin: 0;
+    color: #333;
+}
+
+.experiencias-content .experience p {
+    margin: 5px 0;
+    color: #666;
+}
+
+
+form {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input {
+    width: 75%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#user-list {
+    margin-top: 20px;
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+/* Switch de status */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007BFF;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+        box-shadow: none;
+        position: fixed;
+        bottom: 0;
+    }
+    
+    .sidebar .logo {
+        width: 100px;
+        height: 40px;
+        margin-bottom: 0;
+    }
+
+    .sidebar button {
+        width: auto;
+        padding: 10px;
+        margin: 0;
+        font-size: 14px;
+    }
+    
+    .content {
+        padding: 10px;
+        margin-bottom: 60px; /* Espaço para a barra lateral fixa no rodapé */
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-photo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+}
